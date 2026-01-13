@@ -19,6 +19,10 @@ use Sendbee\Api\Support\Model;
  * @property string $text Text
  * @property string $language Language
  * @property string $attachment Attachment
+ * @property string $rejected_reason
+ * @property string $name
+ * @property string $category
+ * @property string $button_tags
  */
 class MessageTemplate extends Model
 {
@@ -33,6 +37,10 @@ class MessageTemplate extends Model
             'text'          => self::fieldText(),
             'language'      => self::fieldText(),
             'attachment'    => self::fieldText(),
+            'rejected_reason' => self::fieldText(), 
+            'name'          => self::fieldText(), 
+            'category'      => self::fieldText(), 
+            'button_tags'   => self::fieldArray(),
         ];
     }
 }

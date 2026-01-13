@@ -19,6 +19,8 @@ use Sendbee\Api\Support\Model;
  * @property string $folder contact folder
  * @property array  $contact_fields array of contact fields
  * @property array  $notes array of notes
+ * @property string $has_messaging_consent
+ * @property string $modified_at
  */
 class Contact extends Model
 {
@@ -33,6 +35,8 @@ class Contact extends Model
             'folder'            => self::fieldText(),
             'contact_fields'    => self::fieldModelCollection(ContactContactField::class),
             'notes'             => self::fieldModelCollection(ContactNote::class),
+            'has_messaging_consent' => self::fieldBoolean(),
+            'modified_at'       => self::fieldDateTime(),
         ];
     }
 }
